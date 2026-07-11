@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { ShieldCheck, ShieldAlert, Award, HelpingHand } from "lucide-react";
+import { ShieldAlert, Award } from "lucide-react";
 
 export const metadata = {
   title: "Safety Certifications & Standards",

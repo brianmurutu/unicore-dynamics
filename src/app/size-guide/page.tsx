@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { Ruler, ShieldAlert, BadgeCheck } from "lucide-react";
+import { Ruler } from "lucide-react";
 
 export const metadata = {
   title: "Size & Fit Guides",
@@ -35,7 +35,7 @@ export default function SizeGuidePage() {
               Baby Car Seats (ECE Standards)
             </h2>
             <p className="mt-2 text-sm text-ink/70 leading-relaxed">
-              Car seat requirements are determined by the child's height and weight, not just age.
+              Car seat requirements are determined by the child&rsquo;s height and weight, not just age.
             </p>
             <div className="mt-6 overflow-x-auto">
               <table className="w-full text-left text-sm border-collapse">

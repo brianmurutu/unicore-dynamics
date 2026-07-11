@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { BookOpen, Calendar, User } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 
 export const metadata = {
   title: "The Unicore Journal | Kids Equipment Blog",

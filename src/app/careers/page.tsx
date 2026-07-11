@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { Briefcase, Heart, Smile, Sparkles } from "lucide-react";
+import { Heart, Smile, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Careers at Unicore Dynamics",
@@ -43,7 +43,7 @@ export default function CareersPage() {
             Careers at Unicore Dynamics
           </h1>
           <p className="mt-4 text-ink/70 leading-relaxed max-w-xl">
-            We are building the future of kids' retail and logistics in East Africa. If you love solving operations, customer support, or supply chain challenges, we'd love to meet you.
+            We are building the future of kids&rsquo; retail and logistics in East Africa. If you love solving operations, customer support, or supply chain challenges, we&rsquo;d love to meet you.
           </p>
         </div>
 

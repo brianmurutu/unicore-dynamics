@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { RotateCcw, ShieldCheck, HeartCrack, ClipboardCheck } from "lucide-react";
+import { RotateCcw, ShieldCheck, HeartCrack } from "lucide-react";
 
 export const metadata = {
   title: "Returns & Exchanges Policy",

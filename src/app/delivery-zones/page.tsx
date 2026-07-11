@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
-import { Truck, Shield, Clock, MapPin } from "lucide-react";
+import { Shield, Clock, MapPin } from "lucide-react";
 
 export const metadata = {
   title: "Delivery Zones & Rates",
