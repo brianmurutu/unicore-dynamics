@@ -12,16 +12,13 @@ import { SlidersHorizontal, ChevronDown, Search, X, Grid, List } from "lucide-re
 
 const CATEGORIES = [
   "All",
-  "Car covers",
   "Kids Outdoor Play",
-  "Camping & Outdoor Gear",
   "Baby Gear & Toys",
-  "Travel & Outdoor Gear",
-  "Home Furniture",
   "Inflatable & Frame Pools",
   "Hover Boards",
   "Recreational Rides",
 ] as const;
+
 
 
 const AGE_RANGES = ["All Ages", "0-1 yrs", "1-3 yrs", "3-6 yrs", "6-12 yrs"] as const;

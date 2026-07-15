@@ -6,11 +6,12 @@ import { Menu, X, Search, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 const NAV_LINKS = [
-  { label: "Nursery & Infant", href: "/shop?category=Nursery+%26+Infant" },
-  { label: "Everyday Essentials", href: "/shop?category=Everyday+Essentials" },
-  { label: "Growing Years", href: "/shop?category=Growing+Years" },
-  { label: "Play", href: "/shop?category=Play" },
+  { label: "Baby Gear & Toys", href: "/shop?category=Baby+Gear+%26+Toys" },
+  { label: "Hover Boards", href: "/shop?category=Hover+Boards" },
+  { label: "Recreational Rides", href: "/shop?category=Recreational+Rides" },
+  { label: "Kids Outdoor Play", href: "/shop?category=Kids+Outdoor+Play" },
 ];
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);

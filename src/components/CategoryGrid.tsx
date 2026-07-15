@@ -2,33 +2,39 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Baby, Shirt, Bike, Puzzle, ArrowUpRight } from "lucide-react";
+import { Baby, Bike, Puzzle, ArrowUpRight, Droplet, Zap } from "lucide-react";
 import FadeIn from "./FadeIn";
 
 const CATEGORIES = [
   {
     icon: Baby,
-    age: "0 to 2",
-    title: "Nursery & Infant",
-    body: "Cribs, car seats, strollers, and feeding gear, all with size and fit guides.",
+    age: "0 to 3",
+    title: "Baby Gear & Toys",
+    body: "Strollers, electric baby swings, and learning toys to support early stages.",
   },
   {
-    icon: Shirt,
-    age: "0 to 6",
-    title: "Everyday Essentials",
-    body: "Clothing, diapers, and health and safety items you're reordering monthly.",
+    icon: Zap,
+    age: "6 to 12",
+    title: "Hover Boards",
+    body: "Bluetooth self-balancing hoverboards and off-road electric scooters.",
   },
   {
     icon: Bike,
-    age: "4 to 12",
-    title: "Growing Years",
-    body: "Bikes, scooters, school desks, and bags built for kids on the move.",
+    age: "1 to 12",
+    title: "Recreational Rides",
+    body: "Rechargeable electric ride-on cars, drift scooters, and kids' electric vehicles.",
   },
   {
     icon: Puzzle,
-    age: "1 to 10",
-    title: "Play",
-    body: "Toys and indoor or outdoor play equipment, sorted by age and skill.",
+    age: "2 to 12",
+    title: "Kids Outdoor Play",
+    body: "Heavy-duty trampolines, bouncing castles, slide sets, and garden swings.",
+  },
+  {
+    icon: Droplet,
+    age: "All Ages",
+    title: "Inflatable & Frame Pools",
+    body: "Large rectangular frame swimming pools and family pools with setup pumps.",
   },
 ];
 
@@ -45,7 +51,7 @@ export default function CategoryGrid() {
           </h2>
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {CATEGORIES.map(({ icon: Icon, age, title, body }, i) => (
             <motion.div
               key={title}

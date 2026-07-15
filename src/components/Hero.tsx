@@ -8,7 +8,32 @@ import { PRODUCTS, formatPrice } from "@/data/products";
 import GrowthRuler from "./GrowthRuler";
 
 
-const SLIDER_PRODUCTS = PRODUCTS.filter((p) => p.image).slice(0, 5);
+// Diverse, high-impact kids' equipment products for the hero slider (no duplicates)
+const getSliderProducts = () => {
+  const selected = [
+    PRODUCTS.find((p) => p.slug.toLowerCase().includes("trampoline")),
+    PRODUCTS.find((p) => p.slug.toLowerCase().includes("slide-with-swing")),
+    PRODUCTS.find((p) => p.slug.toLowerCase().includes("electric-on-car") || p.slug.toLowerCase().includes("ride-on-car")),
+    PRODUCTS.find((p) => p.slug.toLowerCase().includes("off-road-hoverboard")),
+    PRODUCTS.find((p) => p.slug.toLowerCase().includes("swimming-pool") || p.slug.toLowerCase().includes("prism-frame") || p.slug.toLowerCase().includes("rectangular-frame")),
+  ].filter((p): p is typeof PRODUCTS[0] => !!p && !!p.image);
+
+  // Fallback to first available unique products if we didn't get enough
+  if (selected.length < 5) {
+    const seen = new Set(selected.map((p) => p.name));
+    for (const p of PRODUCTS) {
+      if (p.image && !seen.has(p.name)) {
+        selected.push(p);
+        seen.add(p.name);
+        if (selected.length >= 5) break;
+      }
+    }
+  }
+  return selected;
+};
+
+const SLIDER_PRODUCTS = getSliderProducts();
+
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
