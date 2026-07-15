@@ -1,7 +1,8 @@
 export interface Product {
   slug: string;
   name: string;
-  category: "Kids Outdoor Play" | "Baby Gear & Toys" | "Inflatable & Frame Pools" | "Hover Boards" | "Recreational Rides";
+  category: "Kids Outdoor Play" | "Kids Indoor Play" | "Baby Gear & Toys" | "Inflatable & Frame Pools" | "Hover Boards" | "Recreational Rides";
+
   ageRange: string;
   price: number;
   cert: string;
@@ -134,7 +135,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-indoor-jungle-gym-all-wooden-2ml-1-2mw-2-1mh",
     "name": "Kids Indoor Jungle Gym &#8211; All Wooden (2m(L) * 1.2m(W) * 2.1m(H)",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 160000,
     "cert": "ASTM / CE certified",
@@ -160,7 +161,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids_rock_climbing_holds_with_easy_grip",
     "name": "Kids Rock Climbing Holds Indoor Outdoor Kids Wall Climber Stones with Screws and Nuts (10 pieces per set)",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 3000,
     "cert": "ASTM / CE certified",
@@ -204,7 +205,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids_interlocking_play_mats",
     "name": "Interlocking Floor Mats for Kids Play Area (1m by1m by 20 mm)",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 3200,
     "cert": "ASTM / CE certified",
@@ -226,7 +227,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-stepping-stones-kids-sensory-balance-equipment",
     "name": "Kids Stepping Stones &#8211; Kids Sensory &#038; Balance Equipment",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 13500,
     "cert": "ASTM / CE certified",
@@ -270,7 +271,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-indoor-playhouse-kids-indoor-play-centre",
     "name": "Kids Indoor Playhouse | Kids indoor Play Centre",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 62500,
     "cert": "ASTM / CE certified",
@@ -292,7 +293,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-playground-tunnel-n-climbers-indoor-kids-play",
     "name": "Kids Crawl and Climb Tunnel &#8211; Kids Play Area",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 44500,
     "cert": "ASTM / CE certified",
@@ -314,7 +315,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-plastic-see-saw-for-indoor-play-area",
     "name": "Kids Plastic See-Saw for Indoor Play Area",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 12500,
     "cert": "ASTM / CE certified",
@@ -336,7 +337,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-rocking-horse-car-toys-dolphin-themed-rocking-car-toy",
     "name": "Kids Rocking Horse Car Toys",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 11500,
     "cert": "ASTM / CE certified",
@@ -358,7 +359,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "indoor-kids-ride-on-car-toy",
     "name": "Indoor Push Car Toy For Kids Indoor Play Area &#8211; Playground Toy (92cm by 87 cm by 50 cm)",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 23500,
     "cert": "ASTM / CE certified",
@@ -402,7 +403,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-indoor-play-centre-premium-all-in-one-kids-play",
     "name": "Kids Indoor Play Centre &#8211; Home, Daycare Centre, Corporate Kids Play Area",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 60500,
     "cert": "ASTM / CE certified",
@@ -494,7 +495,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids-indoor-beam-balance",
     "name": "Kids Indoor Beam Balance",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 17500,
     "cert": "ASTM / CE certified",
@@ -582,7 +583,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kids_swings_and_slide_sets",
     "name": "Kids Indoor Swing and Slide Set (197 cm by 152 cm by 124 cm)",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 35400,
     "cert": "ASTM / CE certified",
@@ -604,7 +605,7 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "gym-fitness-jumping-mini-trampoline-kids-adults",
     "name": "Mini Trampolines for Kids / Adult gym fitness",
-    "category": "Kids Outdoor Play",
+    "category": "Kids Indoor Play",
     "ageRange": "All Ages",
     "price": 16500,
     "cert": "ASTM / CE certified",

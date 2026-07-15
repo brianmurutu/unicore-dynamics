@@ -13,6 +13,7 @@ import { SlidersHorizontal, ChevronDown, Search, X, Grid, List } from "lucide-re
 const CATEGORIES = [
   "All",
   "Kids Outdoor Play",
+  "Kids Indoor Play",
   "Baby Gear & Toys",
   "Inflatable & Frame Pools",
   "Hover Boards",
@@ -64,10 +65,16 @@ function ShopContent() {
   const [onlySale, setOnlySale] = useState<boolean>(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory, activeAge, search, maxPrice, onlySale, sort]);
+
 
   useEffect(() => {
     async function loadProducts() {
@@ -153,6 +160,21 @@ function ShopContent() {
     filtered = filtered.filter((p) => p.badge === "Sale" || (p.comparePrice && p.comparePrice > p.price));
   }
   filtered = sortProducts(filtered, sort);
+
+  // Pagination calculations
+  const ITEMS_PER_PAGE = 12;
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedProducts = filtered.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 280, behavior: "smooth" });
+    }
+  };
+
 
   // Helper count for categories
   const getCategoryCount = (category: string) => {
@@ -414,13 +436,13 @@ function ShopContent() {
             </div>
           ) : viewMode === "grid" ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {filtered.map((product) => (
+              {paginatedProducts.map((product) => (
                 <ProductCard key={product.slug} product={product} />
               ))}
             </div>
           ) : (
             <div className="space-y-4">
-              {filtered.map((product) => (
+              {paginatedProducts.map((product) => (
                 <div
                   key={product.slug}
                   className="flex flex-col sm:flex-row rounded-3xl border border-ink/8 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
@@ -463,9 +485,50 @@ function ShopContent() {
             </div>
           )}
 
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12 bg-white px-6 py-4 rounded-2xl border border-ink/5">
+              <button
+                onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="flex items-center gap-1 px-4 py-2 rounded-xl border border-ink/10 text-xs font-semibold text-ink hover:bg-stone/10 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              >
+                Previous
+              </button>
+              
+              <div className="flex items-center gap-1.5">
+                {Array.from({ length: totalPages }).map((_, idx) => {
+                  const pageNum = idx + 1;
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => handlePageChange(pageNum)}
+                      className={`w-9 h-9 flex items-center justify-center rounded-xl text-xs font-mono font-bold transition-all ${
+                        currentPage === pageNum
+                          ? "bg-marigold text-white shadow-md shadow-marigold/20"
+                          : "border border-ink/5 hover:bg-stone/10 text-ink/70"
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <button
+                onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-1 px-4 py-2 rounded-xl border border-ink/10 text-xs font-semibold text-ink hover:bg-stone/10 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              >
+                Next
+              </button>
+            </div>
+          )}
+
           {error && (
             <p className="mt-6 text-center text-xs text-brick/70 font-mono">{error}</p>
           )}
+
         </div>
       </div>
     </main>

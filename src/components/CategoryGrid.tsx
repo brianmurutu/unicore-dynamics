@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Baby, Bike, Puzzle, ArrowUpRight, Droplet, Zap } from "lucide-react";
+import { Baby, Bike, Puzzle, ArrowUpRight, Droplet, Zap, Blocks } from "lucide-react";
 import FadeIn from "./FadeIn";
 
 const CATEGORIES = [
@@ -23,6 +23,12 @@ const CATEGORIES = [
     age: "1 to 12",
     title: "Recreational Rides",
     body: "Rechargeable electric ride-on cars, drift scooters, and kids' electric vehicles.",
+  },
+  {
+    icon: Blocks,
+    age: "1 to 8",
+    title: "Kids Indoor Play",
+    body: "Wooden jungle gyms, interlocking foam mats, climbing holds, and sensory stepping stones.",
   },
   {
     icon: Puzzle,

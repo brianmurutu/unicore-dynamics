@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Baby Gear & Toys", href: "/shop?category=Baby+Gear+%26+Toys" },
   { label: "Hover Boards", href: "/shop?category=Hover+Boards" },
   { label: "Recreational Rides", href: "/shop?category=Recreational+Rides" },
+  { label: "Kids Indoor Play", href: "/shop?category=Kids+Indoor+Play" },
   { label: "Kids Outdoor Play", href: "/shop?category=Kids+Outdoor+Play" },
 ];
 
