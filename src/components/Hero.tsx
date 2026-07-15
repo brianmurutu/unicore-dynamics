@@ -4,7 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, ShieldCheck, Clock } from "lucid
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
-import { PRODUCTS, PRODUCT_IMAGES, formatPrice } from "@/data/products";
+import { PRODUCTS, formatPrice } from "@/data/products";
 
 const SLIDER_PRODUCTS = PRODUCTS.filter((p) => p.image).slice(0, 5);
 
