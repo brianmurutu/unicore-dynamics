@@ -48,13 +48,23 @@ export const metadata: Metadata = {
     siteName: "Unicore Dynamics",
     locale: "en_KE",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Unicore Dynamics Logo",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Unicore Dynamics | Kids Equipment Built to Last",
     description:
       "Every stage of childhood, sorted. Nursery, everyday essentials, growing years, and play, all in one place.",
+    images: ["/logo.png"],
   },
+
   robots: {
     index: true,
     follow: true,
