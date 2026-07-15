@@ -105,7 +105,7 @@ export default function Hero() {
               Premium Kids' Gear & Active Play Equipment.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-ink/75 leading-relaxed">
-              From heavy-duty trampolines and bouncing castles to electric ride-on cars, hoverboards, and family frame swimming pools. We bring safety-certified active play equipment straight to Kenyan families, backed by cash on delivery.
+              From heavy-duty trampolines and bouncing castles to balance trikes, hoverboards, and family frame swimming pools. We bring safety-certified active play equipment straight to Kenyan families, backed by cash on delivery.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3">

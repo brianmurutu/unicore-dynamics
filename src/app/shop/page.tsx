@@ -61,7 +61,7 @@ function ShopContent() {
   const [activeAge, setActiveAge] = useState<string>("All Ages");
   const [sort, setSort] = useState("featured");
   const [search, setSearch] = useState("");
-  const [maxPrice, setMaxPrice] = useState<number>(50000);
+  const [maxPrice, setMaxPrice] = useState<number>(500000);
   const [onlySale, setOnlySale] = useState<boolean>(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
@@ -297,15 +297,15 @@ function ShopContent() {
             <input
               type="range"
               min="1000"
-              max="50000"
-              step="500"
+              max="500000"
+              step="1000"
               value={maxPrice}
               onChange={(e) => setMaxPrice(parseInt(e.target.value))}
               className="w-full accent-teal cursor-pointer h-1 bg-ink/10 rounded-lg appearance-none"
             />
             <div className="flex justify-between text-[10px] text-ink/40 font-mono mt-1">
               <span>KSh 1,000</span>
-              <span>KSh 50,000</span>
+              <span>KSh 500,000</span>
             </div>
           </div>
 
@@ -347,13 +347,13 @@ function ShopContent() {
           </div>
 
           {/* Clear filters */}
-          {(activeCategory !== "All" || activeAge !== "All Ages" || search || maxPrice < 50000 || onlySale) && (
+          {(activeCategory !== "All" || activeAge !== "All Ages" || search || maxPrice < 500000 || onlySale) && (
             <button
               onClick={() => {
                 setActiveCategory("All");
                 setActiveAge("All Ages");
                 setSearch("");
-                setMaxPrice(50000);
+                setMaxPrice(500000);
                 setOnlySale(false);
               }}
               className="w-full text-center text-xs text-brick/95 hover:text-brick font-semibold py-2.5 border border-brick/20 rounded-xl hover:bg-brick/5 transition-colors"
@@ -426,7 +426,7 @@ function ShopContent() {
                   setActiveCategory("All");
                   setActiveAge("All Ages");
                   setSearch("");
-                  setMaxPrice(50000);
+                  setMaxPrice(500000);
                   setOnlySale(false);
                 }}
                 className="mt-5 rounded-full bg-ink text-stone px-6 py-2.5 text-sm font-semibold hover:bg-ink/90 transition-colors"
